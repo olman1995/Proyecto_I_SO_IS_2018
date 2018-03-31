@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include "Cola.h"
 #include "Servidor.h"
-
+#include  "Hilo.h"
 
 int main()
 {
-   iniciar();
-   printf("Hello, World!");
-   return 0;
+	Cola *cola=(Cola*)malloc(sizeof(Cola));
+	iniciar(cola);
+	return 0;
 
 }
