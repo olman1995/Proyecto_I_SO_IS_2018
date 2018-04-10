@@ -79,7 +79,6 @@ void iniciar(Cola *cola){
 				temporal=1;
 				cambio=1;
 				for(int i = 0; i< len ; i++){
-					//	printf("value: %d \n",buffer[i]);
 					if(buffer[i] == 32){
 						cambio=0;
 					}else{
@@ -93,10 +92,10 @@ void iniciar(Cola *cola){
 					}
 
 				}
-				insertar(cola,contar,contar,burst,prioridad);
-				imprimir(cola);
-				printf("\033[H\033[J");
-
+				insertar(cola,contar,burst,prioridad,cola->tiempo);
+				if(cola->estado==0){
+						cola->estado=1;
+				}
 				sprintf(buffer, "%d",contar);
 				send(sock, buffer, len, 0);
 			}

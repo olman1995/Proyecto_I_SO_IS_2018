@@ -1,5 +1,5 @@
 
-void *print_message_function( void *nodo ){
+void *enviar_procesos( void *nodo ){
 		 Nodo *informacion;
 	     informacion = (Nodo *) nodo;
 
@@ -10,7 +10,7 @@ void *print_message_function( void *nodo ){
 void iniciar_hilo(Nodo *nodo){
 	int retorno;
 
-	retorno = pthread_create(&nodo->hilo,NULL,&print_message_function,(void*)nodo);
+	retorno = pthread_create(&nodo->hilo,NULL,&enviar_procesos,(void*)nodo);
 	if(retorno){
 		fprintf(stderr,"Error - pthread_create() return code: %d\n",retorno);
 	}

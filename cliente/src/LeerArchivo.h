@@ -1,11 +1,11 @@
 
 
-void leer_archivo(Cola *cola,int cantidad){
+void leer_archivo(Cola *cola,char * direccion){
 	FILE* fichero;
 
 
 
-    fichero = fopen("/home/olman/Escritorio/Progamacion_I_SO/git/Proyecto_I_SO_IS_2018/cliente/src/procesos.txt", "r");
+    fichero = fopen(direccion, "r");
 
 
 
@@ -18,8 +18,6 @@ void leer_archivo(Cola *cola,int cantidad){
 	leer_busrt=1;
 	c = getc(fichero);
 	while( c != 70){
-
-		//putchar(c);
 		if(c == 10){
 			insertar(cola,0,0,burst,prioridad);
 			leer_busrt = 1;
