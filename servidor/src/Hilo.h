@@ -69,14 +69,11 @@ void *administrador_cpu( void *cola ){
 						 contar=contar+1;
 	    			 	 if(llegada->quatun == contar){
 	    				 	 contar=0;
-	    				 	 printf("test 1 \n");
 	    				 	 if(temporal->siguiente==NULL){
 							 	 temporal = NULL;
-							 	 printf("test 2 \n");
 						 	 }else{
 							 	 temporal = temporal->siguiente;
 						 	 }
-	    				 	 printf("test 4 \n");
 	    			 	 }
 					 }
 

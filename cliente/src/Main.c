@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
 		iniciar_hilo(actual);
 		actual = actual->siguiente;
 		imprimir(cola);
-		//tiempo = (rand() % 5) +3;
-		tiempo = 1;
+		tiempo = (rand() % 5) +3;
+		//tiempo = 1;
 		sleep(tiempo);
 		printf("\033[H\033[J");
 	}
