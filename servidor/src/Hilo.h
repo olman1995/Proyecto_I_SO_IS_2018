@@ -51,7 +51,6 @@ void *administrador_cpu( void *cola ){
 						 pid=temporal->pid;
 
 
-
 						 if(temporal->siguiente==NULL){
 								 temporal = NULL;
 						 }else{
